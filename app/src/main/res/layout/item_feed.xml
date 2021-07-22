@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_cover"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:actualImageScaleType="centerCrop"
+        app:roundedCornerRadius="8dp"
+        android:layout_marginVertical="6dp"
+        android:layout_marginHorizontal="20dp"
+        app:progressBarImage="@drawable/loading"
+        app:overlayImage="@drawable/bg_round_rect"
+        />
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:layout_alignLeft="@id/sd_cover"
+        android:layout_alignTop="@id/sd_cover"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        tools:text="发布者："
+        />
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:layout_alignRight="@id/sd_cover"
+        android:layout_alignBottom="@id/sd_cover"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        tools:text="发布时间："
+        />
+</RelativeLayout>

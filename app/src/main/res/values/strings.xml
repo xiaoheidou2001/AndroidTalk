@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidTalk</string>
+    <string name="record"></string>
+    <string name="next"></string>
+</resources>

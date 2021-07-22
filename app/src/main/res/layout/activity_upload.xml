@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.example.version0.FullScreenVideoView
+        android:id="@+id/videoView"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/sd_cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choose_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择视频"
+        app:layout_constraintLeft_toLeftOf="@id/videoView"
+        app:layout_constraintBottom_toBottomOf="@id/videoView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_cover"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:placeholderImage="@drawable/bg_round_rect" />
+
+    <Button
+        android:id="@+id/btn_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择封面"
+        app:layout_constraintRight_toRightOf="@id/sd_cover"
+        app:layout_constraintBottom_toBottomOf="@id/sd_cover"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="276dp"
+        android:layout_height="61dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:background="@drawable/bg_round_rec2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sd_cover" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/select_button1"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="@id/videoView"
+        app:layout_constraintRight_toRightOf="@id/videoView"
+        app:layout_constraintTop_toTopOf="@id/videoView"
+        app:layout_constraintBottom_toBottomOf="@id/videoView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
